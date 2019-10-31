@@ -1,0 +1,49 @@
+.button-container {
+  height: 24vh;
+  background: url('~images/support-background.png'), linear-gradient(#1d222a, #1d222a);
+  display: flex;
+  padding-bottom: 40px;
+  background-size: 100% 100%;
+  justify-content: center;
+  align-items: flex-end;
+
+  .support-btn {
+    width: 154px;
+    height: 40px;
+    clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+    border: none;
+    text-transform: uppercase;
+    font-size: 15.8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    
+    .loader {
+      top: -51px;
+      left: 14px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      background: rgb(83, 253, 253);
+      color: #000000;
+    }
+
+    &.empty {
+      background: linear-gradient(to top, #636a6a, #abb2b2);
+      color: #474e4e;
+      opacity: 0.65;
+    }
+
+    &.not-empty {
+      background: linear-gradient(to top, #01928a, #2ce8ed);
+      color: #000000;
+    }
+  }
+}

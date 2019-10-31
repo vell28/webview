@@ -1,0 +1,99 @@
+@import '~assets/styles/variables.less';
+
+.app-sidebar {
+  @sidebar-padding: 25px;
+  font-family: @roboto;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: rgba(26, 38, 48, 0.87);
+  min-height: 100vh;
+
+  .aside-navigation {
+    background-image: url('~images/sidebar_background.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    .main-navigation {
+      padding-right: 25px;
+    }
+  }
+
+  .sidebar-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    padding: 25px 25px 0 25px;
+    background-color: @color-dark;
+
+    .user-card {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      padding-top: @indent-large;
+
+      .user-photo-container {
+        background-image: linear-gradient(rgb(46, 236, 241) 0%, rgb(6, 67, 74) 100%);
+        width: 56px;
+        height: 57px;
+        border-radius: 50%;
+        margin: 0 20px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .user-photo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      .user-info {
+        display: flex;
+        position: relative;
+        flex: 1;
+        justify-content: space-between;
+
+        a {
+          text-decoration: none;
+        }
+
+        .user-name {
+          font-weight: bold;
+          color: @color-white;;
+        }
+
+        .user-balance,
+        .user-role {
+          font-size: 14px;
+          color: @color-gray;
+        }
+
+        .user-balance {
+          align-self: flex-end;
+          color: white;
+          font-weight: bold;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+
+          &:before {
+            content: '$';
+            color: @color-gray;
+            margin-right: @indent-xsmall;
+          }
+        }
+      }
+    }
+  }
+
+  .header-underline {
+    height: 1px;
+    margin: 20px -25px 0;
+    box-shadow: 0 0 3px 1px @neon-color;
+    background: linear-gradient(90deg, @neon-color 0%, rgba(255, 255, 255, 1) 50%, @neon-color 100%);
+  }
+}

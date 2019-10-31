@@ -1,0 +1,185 @@
+@import '~assets/styles/variables.less';
+
+.business-card-editor-container {
+  font-family: @roboto;
+  display: flex;
+  flex-direction: column;
+
+  .button-wrap,
+  .link {
+    height: 42px;
+    width: 135px;
+    clip-path: none;
+    margin: 0.8px 0 0 0.8px;
+
+    .link {
+      text-transform: uppercase;
+      font-size: 16px;
+
+      .loader {
+        top: -49px;
+        left: 12px;
+      }
+
+      span {
+        font-size: 10px;
+      }
+    }
+  }
+
+  .create,
+  .cancel {
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .create {
+    color: black;
+    background: url('~images/ar-business-card/buttonHexagonal-create.png');
+
+    &:active {
+      background: url('~images/ar-business-card/buttonHexagonal-create-active.png');
+    }
+  }
+
+  .create:disabled {
+    color: @color-light;
+    background: url('~images/ar-business-card/button-hexagonal-right.png');
+    background-size: 100% 100%;
+  }
+
+  .cancel {
+    background: url('~images/ar-business-card/buttonHexagonal-cancel.png');
+
+    &:active {
+      background: url('~images/ar-business-card/buttonHexagonal-cancel-active.png');
+    }
+  }
+
+  .business-card {
+    .buttons-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 25px;
+      margin: 10px 0 35px;
+
+      .button-wrap {
+        background: transparent;
+      }
+    }
+    
+    .preview-card {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .flip-icon {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    right: 54px;
+    top: 35px;
+    z-index: 2;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 310px;
+    height: 170px;
+    perspective: 1000px;
+    overflow: hidden;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card.hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+}
+
+.remove-card-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .remove-card-btn {
+    display: block;
+    background: url('../../../../images/remove.png'), no-repeat;
+    width: 17px;
+    height: 23px;
+    background-position: center;
+    background-size: 100% 100%;
+  }
+}
+
+@media (max-height: 785px) {
+  .business-card {
+    .buttons-container {
+      margin: 10px 0 0;
+    }
+  }
+}
+
+@media (max-height: 655px) {
+  .flip-card {
+    height: 140px !important;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    height: 140px !important;
+  }
+
+  .business-card-editor-container {
+    .section-header {
+      height: 41px !important;
+    }
+  }
+
+}
+
+@media (max-width: 340px) {
+  .business-card {
+    .buttons-container {
+
+      margin-top: 0 !important;
+
+      .button-wrap,
+      .button-wrap button {
+        height: 30px !important;
+        width: 95px !important;
+      }
+
+      .button-wrap button {
+        background-size: contain;
+      }
+    }
+  }
+}

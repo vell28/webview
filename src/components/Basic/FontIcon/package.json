@@ -1,0 +1,5 @@
+{
+  "name": "font-icon",
+  "private": true,
+  "main": "./font-icon.tsx"
+}

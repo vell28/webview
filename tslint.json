@@ -1,0 +1,72 @@
+{
+  "defaultSeverity": "warning",
+  "extends": [
+    "tslint:latest",
+    "tslint-react",
+    "tslint-config-airbnb"
+  ],
+  "rules": {
+    "interface-name": [
+      true,
+      "never-prefix"
+    ],
+    "import-name": false,
+    "object-literal-sort-keys": false,
+    "no-small-switch": false,
+    "ordered-imports": false,
+    "triple-equals": [
+      true,
+      "allow-null-check"
+    ],
+    "switch-default": true,
+    "no-duplicate-imports": true,
+    "no-magic-numbers": false,
+    "cyclomatic-complexity": false,
+    "increment-decrement": false,
+    "newline-before-return": false,
+    "no-parameter-properties": false,
+    "no-parameter-reassignment": false,
+    "no-unused-variable": false,
+    "typedef": false,
+    "jsx-self-close": false,
+    "unnecessary-else": false,
+    "no-console": false,
+    "trailing-comma": false,
+    "ter-indent": false,
+    "jsx-wrap-multiline": false,
+    "no-submodule-imports": false,
+    "variable-name": false,
+    "import-spacing": false,
+    "no-trailing-whitespace": false,
+    "no-implicit-dependencies": false,
+    "jsx-curly-spacing": false,
+    "semicolon": false,
+    "jsx-boolean-value": false,
+    "jsx-no-multiline-js": false,
+    "jsx-no-lambda": false,
+    "object-shorthand-properties-first": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "no-var-requires": false,
+    "no-object-literal-type-assertion": false,
+    "whitespace": false,
+    "no-angle-bracket-type-assertion": false,
+    "array-bracket-spacing": false,
+    "ter-computed-property-spacing": false,
+    "object-literal-key-quotes": false,
+    "no-string-literal": false,
+    "no-unused-expression": false,
+    "no-boolean-literal-compare": false,
+    "no-shadowed-variable": false,
+    "ter-arrow-parens": false,
+    "no-increment-decrement": false,
+    "max-line-length": {
+      "options": {
+        "limit": 120
+      }
+    },
+    "indent": {
+      "options": "spaces"
+    }
+  }
+}

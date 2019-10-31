@@ -1,0 +1,62 @@
+@import '~assets/styles/variables.less';
+
+.business-card-editor-container {
+  font-family: @roboto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .preview-card {
+    @padding: 30px;
+
+    padding: @padding;
+    position: relative;
+
+    .photo-container {
+      min-height: 32vh;
+
+      > img,
+      video {
+        width: calc(100vw - 2 * @padding);
+        height: 100%;
+      }
+    }
+
+    .button-wrap {
+      position: absolute;
+      height: 25px;
+      width: 80px;
+      bottom: 23px;
+      right: 30px;
+      clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+
+      .link {
+        height: 23px;
+        width: 78px;
+        clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+@media (max-height: 785px) {
+  .business-card-editor-container {
+    .preview-card {
+      padding: 15px 30px;
+      position: relative;
+
+      .button-wrap {
+        bottom: 8px !important;
+      }
+    }
+  }
+}
+
+@media (max-height: 725px) {
+  .business-card-editor-container {
+    .preview-card {
+      padding: 15px 30px;
+    }
+  }
+}

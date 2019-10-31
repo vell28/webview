@@ -1,0 +1,47 @@
+.create-edit-card {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .header {
+    height: 60px;
+    background: linear-gradient(#1c2832 0%, #151b21 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+
+    .go-back-button {
+      background-image: url('~images/back_button_arrow.png');
+      height: 34px;
+      width: 40px;
+      background-repeat: no-repeat;
+      padding: 2px 0 10px 0;
+      position: relative;
+      top: 6px;
+    }
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 11pt;
+    font-weight: 300;
+  }
+
+  .section-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 30px;
+    background-color: #2b333a;
+    position: sticky;
+    top: 60px;
+    z-index: 999;
+  }
+}

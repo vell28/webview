@@ -1,0 +1,74 @@
+body {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  font-family: @roboto;
+  background: #161A24;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+body.key-up {
+  position: relative;
+  overflow: scroll;
+  height: 100%;
+
+  .login-wrap {
+    position: relative;
+  }
+
+  .support-content-container {
+    height: 100%;
+  }
+
+  .profile-wrapper h3 {
+    margin-bottom: 164px
+  }
+}
+
+a,
+button,
+input {
+  outline: none;
+}
+
+a,
+button,
+.btn-back,
+.remove-card-btn,
+.image-wrap,
+.photo-icon,
+.edit-btn,
+.hamburger-inner,
+.go-back-button,
+input[type="submit"],
+input[type="file"] {
+  &:active {
+    opacity: 0.65;
+  }
+
+  &:disabled {
+    &:before {
+      opacity: 0.5;
+    }
+  }
+}
+
+.image-wrap span:active {
+  opacity: 0.65;
+}
+
+li,
+ol {
+  list-style-type: none;
+}
+
+.loader-cover-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 100vh;
+}

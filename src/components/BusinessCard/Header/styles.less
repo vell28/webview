@@ -1,0 +1,39 @@
+.bc-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  height: 125px;
+  background: rgba(45, 45, 45, 0.7) url('~images/ar-business-card/header-photo.png') no-repeat;
+  background-size: 100%;
+  background-position-y: -35px;
+  background-blend-mode: darken;
+
+  .bc-header-icon-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+  }
+
+  .info-button {
+    padding-right: 20px;
+  }
+}
+
+@media (max-height: 761px) {
+  .bc-header-container {
+    height: 80px;
+  }
+}
+
+@media (max-height: 600px) {
+  .bc-header-container {
+    height: 60px;
+  }
+}

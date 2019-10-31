@@ -1,0 +1,59 @@
+@import '~assets/styles/variables.less';
+
+@keyframes scaling {
+  0% {
+    transform: scale(0.1);
+  }
+
+  65% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.notify-wrap {
+  background: rgb(200, 236, 235);
+  border-radius: 5px;
+  width: 220px;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  will-change: transform;
+  transform: scale(0);
+  transition: all 0.4s;
+  display: none;
+
+  span {
+    background-image: url('../../../images/error_sign.png');
+    background-repeat: no-repeat;
+    width: 17px;
+    height: 17px;
+    display: block;
+    background-size: 100% 100%;
+  }
+
+  .success {
+    background-image: url('../../../images/success_sign.png');
+  }
+
+  p {
+    padding: 11px 0;
+    margin: 0;
+    font-size: 14px;
+    color: @color-dark;
+    font-weight: 400;
+    max-width: 80%;
+  }
+}
+
+.notify-wrap.show {
+  display: flex;
+  animation: scaling 0.4s;
+  will-change: transform;
+  transform: scale(1);
+  transition: animation 0.4s;
+}

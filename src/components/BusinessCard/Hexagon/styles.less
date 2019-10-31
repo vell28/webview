@@ -1,0 +1,61 @@
+.hexagon {
+  position: relative;
+  height: 25px;
+  width: 23px;
+  transform: rotate(90deg);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+  > * {
+    transform: rotate(-90deg);
+    font-size: 15px;
+    position: relative;
+    bottom: -4px;
+    font-weight: normal;
+    color: black;
+    text-align: center;
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  &:before {
+    @border-width: 2px;
+    top: @border-width;
+    left: @border-width;
+    height: calc(100% - 2 * @border-width);
+    width: calc(100% - 2 * @border-width);
+  }
+
+  &.active {
+    height: 23px;
+    width: 22px;
+    background: #41dce4;
+  }
+
+  &.black {
+    &:before {
+      background: black;
+    }
+  }
+
+  &.white {
+    &:before {
+      background: white;
+    }
+  }
+
+  &.blue {
+    &:before {
+      background-image: linear-gradient(to left, rgb(0, 144, 136), rgb(46, 236, 241));
+    }
+  }
+
+  &.disabled {
+    &:before {
+      opacity: 0.5;
+    }
+  }
+}

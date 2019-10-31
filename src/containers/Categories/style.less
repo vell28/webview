@@ -1,0 +1,27 @@
+.main-page-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #2b3541;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+
+  ::-webkit-scrollbar {
+    width: 1px;
+    color: rgba(0, 0, 0, 0);
+  }
+}
+
+.section-container {
+  overflow: auto;
+  box-sizing: border-box;
+  width: 100%;
+  background: #2b3541;
+  padding: 25px 15.7pt 15px 15.7pt;
+  border-top: 2px solid #404c59;
+  -webkit-overflow-scrolling: touch;
+}
+
+.open-sidebar {
+  pointer-events: none;
+}

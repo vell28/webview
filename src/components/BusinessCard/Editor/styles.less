@@ -1,0 +1,41 @@
+@import '~assets/styles/variables.less';
+
+.business-card-editor-container {
+  font-family: @roboto;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: #161A24;
+
+  .header {
+    height: 50px;
+    background: linear-gradient(#1c2832 0%, #151b21 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+    width: 100%;
+
+    .go-back-button {
+      background-image: url('~images/back_button_arrow.png');
+      height: 35px;
+      width: 40px;
+      background-repeat: no-repeat;
+      z-index: 2;
+    }
+  }
+
+  .section-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 30px;
+    background-color: #2b333a;
+
+    .title {
+      text-transform: uppercase;
+    }
+  }
+}

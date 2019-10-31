@@ -1,0 +1,5 @@
+{
+  "name": "hamburger",
+  "private": true,
+  "main": "./hamburger.tsx"
+}

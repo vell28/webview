@@ -1,0 +1,57 @@
+@import '~assets/styles/variables.less';
+
+.progres-bar-block {
+  position: fixed;
+  top: 0;
+  background-color: rgba(34, 43, 54, 0.95);
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  .progress-wrap {
+    height: 203px;
+    width: 104px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .start {
+      background-image: url('../../../images/ar-business-card/shape.png');
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .progress {
+      background-image: url('../../../images/ar-business-card/shape-purpure.png');
+      position: absolute;
+      bottom: 0;
+      left: -1px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left bottom;
+      width: 105px;
+      z-index: 2;
+    }
+
+    .procent {
+      font-size: 20px;
+      font-weight: 400;
+      color: #3cdbdf;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import '~assets/styles/variables.less';
+
+.bc-templates-collection {
+  .templates-collection-header {
+    display: flex;
+    justify-content: space-between;
+    padding: @indent-large;
+    color: white;
+    text-transform: uppercase;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  .collection-list {
+    display: flex;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 @indent-middle @indent-large @indent-small;
+
+    .collection-item {
+      margin-left: @indent-small;
+      color: white;
+      display: flex;
+      flex-direction: column;
+
+      &:last-child {
+        padding-right: @indent-middle;
+      }
+
+      > img {
+        width: 145px;
+      }
+
+      &.empty > .border {
+        min-width: 125px;
+        border: 2px dashed #959595;
+        height: 93px;
+      }
+    }
+  }
+}
+
+@media (max-height: 655px) {
+  .bc-templates-collection {
+    .templates-collection-header {
+      padding: @indent-small @indent-large 0;
+    }
+  }
+}

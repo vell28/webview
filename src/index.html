@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta
+    name="description"
+    content
+  >
+  <meta
+    http-equiv="x-ua-compatible"
+    content="ie=edge"
+  >
+
+  <meta name="HandheldFriendly" content="true">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:500,300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <title>Global Virtual</title>
+  <style>
+    .dot-bricks{position:relative;top:8px;left:-9999px;width:10px;height:10px;border-radius:5px;background-color:rgb(62, 228, 232);color:rgb(62, 228, 232);box-shadow:9991px -16px 0 0 rgb(62, 228, 232),9991px 0 0 0 rgb(62, 228, 232),10007px 0 0 0 rgb(62, 228, 232);animation:dotBricks 2s infinite ease}@keyframes dotBricks{0%{box-shadow:9991px -16px 0 0 rgb(62, 228, 232),9991px 0 0 0 rgb(62, 228, 232),10007px 0 0 0 rgb(62, 228, 232)}8.333%{box-shadow:10007px -16px 0 0 rgb(62, 228, 232),9991px 0 0 0 rgb(62, 228, 232),10007px 0 0 0 rgb(62, 228, 232)}16.667%{box-shadow:10007px -16px 0 0 rgb(62, 228, 232),9991px -16px 0 0 rgb(62, 228, 232),10007px 0 0 0 rgb(62, 228, 232)}25%{box-shadow:10007px -16px 0 0 rgb(62, 228, 232),9991px -16px 0 0 rgb(62, 228, 232),9991px 0 0 0 rgb(62, 228, 232)}33.333%{box-shadow:10007px 0 0 0 rgb(62, 228, 232),9991px -16px 0 0 rgb(62, 228, 232),9991px 0 0 0 rgb(62, 228, 232)}41.667%{box-shadow:10007px 0 0 0 rgb(62, 228, 232),10007px -16px 0 0 rgb(62, 228, 232),9991px 0 0 0 rgb(62, 228, 232)}50%{box-shadow:10007px 0 0 0 rgb(62, 228, 232),10007px -16px 0 0 rgb(62, 228, 232),9991px -16px 0 0 rgb(62, 228, 232)}58.333%{box-shadow:9991px 0 0 0 rgb(62, 228, 232),10007px -16px 0 0 rgb(62, 228, 232),9991px -16px 0 0 rgb(62, 228, 232)}66.666%{box-shadow:9991px 0 0 0 rgb(62, 228, 232),10007px 0 0 0 rgb(62, 228, 232),9991px -16px 0 0 rgb(62, 228, 232)}75%{box-shadow:9991px 0 0 0 rgb(62, 228, 232),10007px 0 0 0 rgb(62, 228, 232),10007px -16px 0 0 rgb(62, 228, 232)}83.333%{box-shadow:9991px -16px 0 0 rgb(62, 228, 232),10007px 0 0 0 rgb(62, 228, 232),10007px -16px 0 0 rgb(62, 228, 232)}91.667%{box-shadow:9991px -16px 0 0 rgb(62, 228, 232),9991px 0 0 0 rgb(62, 228, 232),10007px -16px 0 0 rgb(62, 228, 232)}100%{box-shadow:9991px -16px 0 0 rgb(62, 228, 232),9991px 0 0 0 rgb(62, 228, 232),10007px 0 0 0 rgb(62, 228, 232)}}#preloader{display:flex;position:fixed;width:100%;top:0;left:0;height:100vh;background:rgb(34, 43, 54);flex-direction:column;justify-content:center;align-items:center;z-index: 999;}#preloader.hide{display: none;}
+  </style>
+</head>
+
+<body>
+  
+  <div id="preloader">
+      <div class="dot-bricks"></div>
+  </div>
+  
+  <div id="root" class="react-app"></div>
+
+  <script>
+    var preloader = document.getElementById('preloader');
+    window.addEventListener('load', function() {
+      preloader.classList.add('hide');
+    });
+  </script>
+
+</body>
+
+</html>

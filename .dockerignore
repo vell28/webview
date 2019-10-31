@@ -1,0 +1,4 @@
+.hg
+.build_revision
+.hgignore
+docker

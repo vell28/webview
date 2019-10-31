@@ -1,0 +1,7 @@
+syntax: glob
+dist/*
+node_modules/*
+.env
+.idea
+/*.orig
+buildInfo.json

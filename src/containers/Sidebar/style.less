@@ -1,0 +1,44 @@
+.main-sidebar-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-size: 100% 100%;
+
+  .react-swipeable-view-container {
+    max-height: 100vh;
+  }
+
+  &.with-sidebar {
+    .react-swipeable-view-container {
+      > div:first-child {
+        width: 90% !important;
+      }
+
+      .overlay-mask {
+        background: white;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+        opacity: 0.5;
+
+        
+      }
+    }
+  }
+}
+
+.sidebar-overlay,
+.sidebar-main-wrap {
+  -webkit-perspective: 3000;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+ 
+  .app-sidebar {
+    -webkit-transform: translate3d(0,0,0);
+  }
+
+  div {
+    -webkit-transform: translate3d(0,0,0);
+  }
+}

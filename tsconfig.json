@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "module": "esnext",
+    "target": "es6",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "lib": [ "es7", "dom" ],
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "paths": {
+      "@*": ["./src*"]
+    }
+  },
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
